@@ -200,16 +200,29 @@ img {
 <h1>APPS/GAMES</h1>
 
 
-<img style="  position:relative; top: 20px; " src="https://oasis-player.netlify.app/assets/icon204.png" width="50px" height="50px" onclick=' window.open("https://oasis-player.netlify.app/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
+<img   onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>OASIS player</h3><br>a nes, gba, n64, sega genisis emulator'"  style="  position:relative; top: 20px; " src="https://oasis-player.netlify.app/assets/icon204.png" width="50px" height="50px" onclick=' window.open("https://oasis-player.netlify.app/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
 
-<img style="  position:relative; top: 20px; " src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="50px" height="50px" onclick=' window.open("https://vscode.dev/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
-<img style="  position:relative; top: 20px; " src="https://oasishub.netlify.app/assets/favicon.ico" width="50px" height="50px" onclick=' window.open("https://tender-einstein-de536a.netlify.app/chatrooms.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
-<img style="  position:relative; top: 20px; " src="https://oasishub.netlify.app/assets/store.ico" width="50px" height="50px" onclick=' window.open("https://oasishub.netlify.app/sites/store.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
 
-<button class="app" onclick=' window.open("https://sm64-web.netlify.app/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
+
+
+<img   onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>vs code online</h3><br> a code editor that this was made with'"  style="  position:relative; top: 20px; " src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="50px" height="50px" onclick=' window.open("https://vscode.dev/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
+
+
+
+
+
+
+<img   onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>OASIS chatrooms</h3><br>an online chatroom made by OASIS'"  style="  position:relative; top: 20px; " src="https://oasishub.netlify.app/assets/favicon.ico" width="50px" height="50px" onclick=' window.open("https://tender-einstein-de536a.netlify.app/chatrooms.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
+
+
+
+
+<img  onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>OASIS STORE</h3><br>a place to get bookmarklets, game ROMS, game files, and more!'"  style="  position:relative; top: 20px; " src="https://oasishub.netlify.app/assets/store.ico" width="50px" height="50px" onclick=' window.open("https://oasishub.netlify.app/sites/store.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
+
+<button onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>super mario 64</h3><br>a online port of the OG super mario 64'"  class="app" onclick=' window.open("https://sm64-web.netlify.app/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
 sm64 web
 </button>
-<button id="playerBTN" class="app">
+<button onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>OASIS web player</h3><br>a iframe overlay that displays over a page *THIS IS NOT A PROXY AND NOT ALL SITES WILL WORK*'"  id="playerBTN" class="app">
 OASIS web player
 </button>
 <button class="KBTN">+</button>
@@ -218,6 +231,7 @@ OASIS web player
 <br>
 <br>
 <br>
+<div id="descriptions"></div>
 
     </div>
     </div>
