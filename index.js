@@ -187,6 +187,9 @@ a {
   border-radius: 100px;
 }
 
+img {
+  margin: 3px;
+}
     </style>
 
   </div>
@@ -200,6 +203,8 @@ a {
 <img style="  position:relative; top: 20px; " src="https://oasis-player.netlify.app/assets/icon204.png" width="50px" height="50px" onclick=' window.open("https://oasis-player.netlify.app/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
 
 <img style="  position:relative; top: 20px; " src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="50px" height="50px" onclick=' window.open("https://vscode.dev/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
+<img style="  position:relative; top: 20px; " src="https://oasishub.netlify.app/assets/favicon.ico" width="50px" height="50px" onclick=' window.open("https://tender-einstein-de536a.netlify.app/chatrooms.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
+<img style="  position:relative; top: 20px; " src="https://oasishub.netlify.app/assets/store.ico" width="50px" height="50px" onclick=' window.open("https://oasishub.netlify.app/sites/store.html","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
 
 <button class="app" onclick=' window.open("https://sm64-web.netlify.app/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
 sm64 web
@@ -207,6 +212,7 @@ sm64 web
 <button id="playerBTN" class="app">
 OASIS web player
 </button>
+<button class="KBTN">+</button>
 <br>
 <br>
 <br>
@@ -220,6 +226,8 @@ OASIS web player
     <a href="javascript:void(0)" class="closebtn" id="newsCBTN" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
 <h1>NEWS</h1>
+<iframe type="text/html" src="https://oasishub.netlify.app/sites/news.html" width="100%" height="700"></iframe>
+
     </div>
     </div>
 
