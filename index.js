@@ -205,6 +205,7 @@ img {
 
 
 
+
 <img   onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>vs code online</h3><br> a code editor that this was made with'"  style="  position:relative; top: 20px; " src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" width="50px" height="50px" onclick=' window.open("https://vscode.dev/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")'>
 
 
@@ -319,8 +320,12 @@ OASIS web player
 
 
 var Site = 'https://oasishub.netlify.app/';
-
-
+var myApps = []
+function saveMyApps() {
+  localStorage.removeItem("myApps");
+    localStorage.setItem("myApps", myApps);
+    alert(myApps);
+}
 
 function openStore() {
    shadowroot.getElementById("STORE").style.display = "block";
@@ -468,7 +473,7 @@ get("#playerBTN", shadowroot).addEventListener("click", () => {
 openPlayer();
 closeNav()
 });
-var myApps = []
+
 get("#NEWAPP", shadowroot).addEventListener("click", () => {
   myApps.push(prompt('app code'));
   shadowroot.getElementById("NewApps").innerHTML = myApps;
