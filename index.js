@@ -132,7 +132,7 @@ body {
   <h1>OASIS hub</h1>
   <h3>Menu</h3>
 <button id="storeBTN" class="KBTN">STORE</button>
-<button id="gamesBTN" class="KBTN">GAMES</button>
+<button id="gamesBTN" class="KBTN">APPS + GAMES</button>
 <button id="newsBTN" class="KBTN">NEWS</button>
 <button id="commentsBTN" class="KBTN">COMMENTS</button>
   </div>
@@ -228,7 +228,11 @@ sm64 web
 <button onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>OASIS web player</h3><br>a iframe overlay that displays over a page *THIS IS NOT A PROXY AND NOT ALL SITES WILL WORK*'"  id="playerBTN" class="app">
 OASIS web player
 </button>
-<button class="KBTN">+</button>
+<br>
+<div id="NewApps"></div>
+<br>
+<button id="NEWAPP" class="KBTN">+</button>
+<button id="EDITAPP" class="KBTN">EDIT</button>
 <br>
 <br>
 <br>
@@ -464,12 +468,26 @@ get("#playerBTN", shadowroot).addEventListener("click", () => {
 openPlayer();
 closeNav()
 });
+var myApps = []
+get("#NEWAPP", shadowroot).addEventListener("click", () => {
+  myApps.push(prompt('app code'));
+  shadowroot.getElementById("NewApps").innerHTML = myApps;
+  });
+  
 
 get("#GO", shadowroot).addEventListener("click", () => {
 var url = get("#url", shadowroot).value;
 shadowroot.getElementById("FRAME").src = url;
 });
 
+
+get("#EDITAPP", shadowroot).addEventListener("click", () => {
+var edit = prompt('app # (0 is first)')
+myApps[edit] = ''
+shadowroot.getElementById("NewApps").innerHTML = myApps;
+
+
+});
 
 
 
