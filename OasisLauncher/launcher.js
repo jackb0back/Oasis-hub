@@ -50,6 +50,8 @@ body {
     border-radius: 100px;
   }
 .overlay {
+   
+    color: white;
   height: 100%;
   width: 100%;
   display: none;
@@ -57,9 +59,54 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.6);
+  background-color: grey;
   overflow: auto;
+}
+
+#myNav {
+    background-image: url("");
+ 
+       background-repeat: no-repeat; /* Do not repeat the image */
+ background-size: 150%; 
+   
+
+}
+
+#NavIMG {
+     background-image: url("");
+     opacity: 0.5;   
+        background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100%;  
+}
+#SetIMG {
+     background-image: url("");
+     opacity: 0.5;   
+        background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100%;  
+}
+
+#PlayIMG {
+     background-image: url("");
+     opacity: 0.5;   
+        background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100%;  
+}
+.settings {
+
+    color: white;
+    height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: grey;
+ background-image: url("");
+   background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 150%;
+  overflow: auto;
+  text-align: center;
 }
 
 .overlay-content {
@@ -142,6 +189,11 @@ body {
     border-radius: 5px;
     z-index: 1;
 }
+
+#PLAYER {
+       background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 100%;
+}
 </style>
 
 
@@ -152,6 +204,7 @@ body {
     <a href="javascript:void(0)" class="closebtn" id="CLOSE" onclick="closeNav()">&times;</a>
     <div id="MENU" height="700px">
 <h1>APP LAUNCHER</h1>
+<div id="NavIMG"></div>
 
 <img  id="OAP" onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>OASIS player</h3><br>a nes, gba, n64, sega genisis emulator'"  style="  position:relative; top: 20px; " src="https://oasis-player.netlify.app/assets/icon204.png" width="50px" height="50px" >
 
@@ -179,13 +232,19 @@ body {
 
 <img id="OA" onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>OASIS OFFLINE google drive</h3><br>OASIS download'"  style="  position:relative; top: 20px; " src="https://oasishub.netlify.app/assets/favicon-logo.ico" width="50px" height="50px" >
 
+<img id="KLEKI" onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>Kleki</h3><br>An online drawing app (this will open in a new window)'"  style="  position:relative; top: 20px; " src="https://kleki.com/app/icon-96x96-min.258d75aa.png" width="50px" height="50px" >
+
 <button onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>super mario 64</h3><br>a online port of the OG super mario 64'"  class="app" id="SM64">
 sm64 web
 </button>
 
+
+
+
 <button onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>OASIS web player</h3><br>a iframe overlay that displays over a page *THIS IS NOT A PROXY AND NOT ALL SITES WILL WORK*'"  id="playerBTN" class="app">
 OASIS web player
 </button>
+<button id="SET">SETTINGS</button>
 <br>
 
 <div id="NewApps"></div>
@@ -214,6 +273,19 @@ OASIS web player
 </iframe>
 
     </div>
+    </div>
+
+
+    <div id="SETTINGS" class="settings">
+
+    <a href="javascript:void(0)" class="closebtn" id="playerCBTN" onclick="closeNav()">&times;</a>
+  <h1>SETTINGS</h1>
+
+  <br>
+  <br>
+  <button id="WALL">WALLPAPER</button>
+    <button id="TXTC">TEXT COLOR</button>
+ 
     </div>
 
 
@@ -296,6 +368,7 @@ var CurrentFrame = ''
 
 function openNav() {
 
+  shadowroot.getElementById("SETTINGS").style.display = "none";
 
     closePlayer();
     shadowroot.getElementById("OPEN").innerHTML = '<'
@@ -375,6 +448,10 @@ get("#CLOSE", shadowroot).addEventListener("click", () => {
 });
 
 
+get("#SET", shadowroot).addEventListener("click", () => {
+    closeNav();
+  shadowroot.getElementById("SETTINGS").style.display = "block";
+});
 
 get("#playerCBTN", shadowroot).addEventListener("click", () => {
 closePlayer();
@@ -409,6 +486,11 @@ get("#VSCODE", shadowroot).addEventListener("click", () => {
     openPlayer();
     closeNav();
     shadowroot.getElementById("FRAME"+CurrentFrame).src = 'https://vscode.dev';
+});
+
+
+get("#KLEKI", shadowroot).addEventListener("click", () => {
+    window.open("https://kleki.com/","_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=1000,height=500")
 });
 
 
@@ -459,6 +541,20 @@ myApps[edit] = ''
 shadowroot.getElementById("NewApps").innerHTML = myApps;
 
 
+});
+
+get("#WALL", shadowroot).addEventListener("click", () => {
+    var BG = "url("+prompt('URL')+")";
+   shadowroot.getElementById('myNav').style.backgroundImage = BG;
+     shadowroot.getElementById('SETTINGS').style.backgroundImage = BG;
+      shadowroot.getElementById('PLAYER').style.backgroundImage = BG;
+});
+
+get("#TXTC", shadowroot).addEventListener("click", () => {
+    var COLOR =prompt('color')
+   shadowroot.getElementById('myNav').style.color = COLOR;
+     shadowroot.getElementById('SETTINGS').style.color = COLOR;
+       shadowroot.getElementById('PLAYER').style.color = COLOR;
 });
 
 
