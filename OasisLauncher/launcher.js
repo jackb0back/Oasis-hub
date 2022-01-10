@@ -244,7 +244,9 @@ sm64 web
 <button onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>OASIS web player</h3><br>a iframe overlay that displays over a page *THIS IS NOT A PROXY AND NOT ALL SITES WILL WORK*'"  id="playerBTN" class="app">
 OASIS web player
 </button>
-<button id="SET">SETTINGS</button>
+
+<img id="SET" onmouseover="shadowroot.getElementById('descriptions').innerHTML = '<h3>SETTINGS</h3><br>'"  style="  position:relative; top: 20px; " src="https://icon-library.com/images/android-settings-icon-png/android-settings-icon-png-21.jpg" width="50px" height="50px" >
+
 <br>
 
 <div id="NewApps"></div>
